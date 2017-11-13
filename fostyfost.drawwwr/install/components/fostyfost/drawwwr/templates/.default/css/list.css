@@ -1,0 +1,77 @@
+body {
+    background-color: #000;
+    color: #eee;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.cont {
+    text-align: center;
+}
+
+.page-head {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.page-head .lead {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+
+.btn {
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.btn-lg {
+    border-radius: 2px;
+    font-size: 18px;
+    line-height: 1.33333;
+    padding: 10px 16px;
+}
+
+.btn-primary:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-primary {
+    background-color: #000;
+    border-color: #eee;
+    color: #eee;
+    transition: color 0.1s ease 0s, background-color 0.15s ease 0s;
+}
+
+.page-head h1 {
+    font-size: 42px;
+    margin: 0 0 20px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+}
+
+.page-head h1 .version {
+    bottom: 0;
+    color: #ddd;
+    font-size: 11px;
+    font-style: italic;
+    position: absolute;
+    width: 58px;
+    right: -58px;
+}

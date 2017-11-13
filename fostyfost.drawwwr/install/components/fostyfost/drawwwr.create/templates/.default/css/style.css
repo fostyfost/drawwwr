@@ -1,0 +1,357 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    zoom: reset;
+}
+
+.controls > a, .brushes > a {
+    position: relative;
+    z-index: 1;
+    display: block;
+    float: left;
+    margin: 0 -1px 0 0;
+    padding: .75em 1em;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #d9d9d9;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.66);
+}
+
+.controls > a > input[type="file"], .brushes > a > input[type="file"] {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    height: 110%;
+    opacity: 0;
+}
+
+.controls > a.unavailable, .brushes > a.unavailable {
+    opacity: .4;
+    pointer-events: none;
+}
+
+.controls > a:first-child, .brushes > a:first-child {
+    border-radius: .33em 0 0 .33em;
+}
+
+.controls > a:last-child, .brushes > a:last-child {
+    margin-right: 0;
+    border-radius: 0 .33em .33em 0;
+}
+
+.controls > a:last-child:first-child, .brushes > a:last-child:first-child {
+    border-radius: .33em;
+}
+
+.controls > a:hover, .brushes > a:hover {
+    z-index: 2;
+    background: #fff;
+    border-color: #bbb;
+    color: #000;
+}
+
+.controls > a.active, .brushes > a.active {
+    background: #06a5f7;
+    color: #fff;
+}
+
+body > img {
+    display: block;
+    position: absolute;
+    right: 100%;
+    bottom: 100%;
+    pointer-events: none;
+}
+
+body > .controls, body > .brushes {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity .2s linear;
+}
+
+body > .controls {
+    top: 1em;
+    left: 1em;
+}
+
+body > .brushes {
+    bottom: 1em;
+    left: 1em;
+}
+
+html.drawing body > .controls, html.drawing body > .brushes {
+    pointer-events: none;
+    opacity: 0;
+}
+
+body > .controls.right {
+    right: 21em;
+    left: auto;
+}
+
+body > .sidebar {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 20em;
+    padding: 3.8em 0 0;
+    background: #eee;
+    border-left: 1px solid #d9d9d9;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html.drawing body > .sidebar {
+    pointer-events: none;
+}
+
+body > .sidebar > .controls-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+body > .sidebar > .controls-section .controls {
+    position: relative;
+}
+
+body > .sidebar > .controls-section .controls > .h1 {
+    display: block;
+    padding: 0 1.55em;
+    border-bottom: 1px solid #d9d9d9;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.3em;
+    line-height: 2.92em;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+body > .sidebar > .controls-section .controls > .h1:last-child {
+    border-bottom: none;
+}
+
+body > .sidebar > .controls-section .controls > .current-color {
+    display: block;
+    position: absolute;
+    top: .5em;
+    top: calc(.5em + 1px);
+    right: .5em;
+    width: 2.7em;
+    height: 2.7em;
+    border-radius: .25em;
+}
+
+body > .sidebar > .controls-section .controls > a {
+    float: right;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+body > .sidebar > .controls-section .controls > canvas {
+    display: block;
+}
+
+body > .sidebar > .controls-section .controls.layers > ul > .layer {
+    position: relative;
+    display: block;
+    padding: 0 1em;
+    border-bottom: 1px solid #d9d9d9;
+    text-align: left;
+    line-height: 2.35em;
+    font-weight: 200;
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+body > .sidebar > .controls-section .controls.layers > ul > .layer.ui-sortable-helper {
+    box-shadow: 0 -1px #d9d9d9;
+}
+
+body > .sidebar > .controls-section .controls.layers > ul > .layer > .hide-layer {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 4.7em;
+    background: #eee;
+    border-left: 1px solid #d9d9d9;
+    font-size: .5em;
+    text-align: center;
+    text-decoration: none;
+    line-height: 4.7em;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+body > .sidebar > .controls-section .controls.layers > ul > .layer > .hide-layer:hover {
+    color: #000;
+}
+
+body > .sidebar > .controls-section .controls.layers > ul > .layer > .hide-layer:before {
+    content: "\f06e";
+    font-family: FontAwesome;
+    font-size: 1.4em;
+}
+
+body > .sidebar > .controls-section .controls.layers > ul > .layer:hover, body > .sidebar > .controls-section .controls.layers > ul > .layer.active {
+    background: #fff;
+    color: #000;
+}
+
+body > .sidebar > .controls-section .controls.layers > ul > .layer:hover > .hide-layer, body > .sidebar > .controls-section .controls.layers > ul > .layer.active > .hide-layer {
+    background: #fff;
+}
+
+body > .sidebar > .controls-section .controls.layers > ul > .layer.active {
+    font-weight: 400;
+}
+
+body > .sidebar > .controls-section .controls.layers > ul > .layer.hidden {
+    opacity: .75;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+body > .sidebar > .controls-section .controls.layers > ul > .layer.hidden > .hide-layer:before {
+    content: "\f070";
+}
+
+html.alt body > .sidebar > .controls-section .controls.layers > ul > .layer > .hide-layer:before {
+    content: "\f014";
+}
+
+body > .sidebar > .controls-section .controls.thickness > .h1 > .current-thickness {
+    float: right;
+    color: rgba(0, 0, 0, 0.33);
+}
+
+body > .sidebar > .controls-section .controls.thickness > input {
+    display: block;
+    margin: 1em 7.5%;
+    width: 85%;
+}
+
+body > .sidebar > .controls-section.bottom {
+    top: auto;
+    bottom: 0;
+}
+
+body > .sidebar > .controls-section.bottom .controls {
+    border-top: 1px solid #d9d9d9;
+    border-bottom: none;
+}
+
+body > .artboards {
+    position: absolute;
+    top: 0;
+    right: 20em;
+    right: calc(20em + 1px);
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background: #fff;
+}
+
+body > .artboards > canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    touch-action: none;
+    pointer-events: none;
+    cursor: crosshair;
+}
+
+html.pen-mode body > .artboards > canvas {
+    cursor: none;
+}
+
+body > .artboards > canvas.hidden {
+    display: none;
+}
+
+body > .artboards > canvas.active {
+    pointer-events: auto;
+}
+
+.preloader-overlay {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .9;
+    z-index: 9999;
+    position: fixed;
+}
+
+.preloader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.ball-scale-multiple > div {
+    background-color: #000;
+}
+
+.dialog-form {
+    font-size: 16px;
+}
+
+.dialog-form label, .dialog-form input {
+    display: block;
+}
+
+.dialog-form input.text {
+    margin-bottom: 12px;
+    width: 95%;
+    padding: .4em;
+}
+
+.dialog-form fieldset {
+    padding: 0;
+    border: 0;
+    margin-top: 0.8em;
+}
+
+.ui-draggable, .ui-droppable {
+    background-position: top;
+}
+
+.no-close .ui-dialog-titlebar-close {
+    display: none;
+}
+
+.ui-dialog .ui-state-error {
+    padding: .3em;
+}
+
+.message-p {
+    border: 1px solid transparent;
+    padding: 0.3em;
+    margin: 0.8em 0;
+}
+
+.hidden-submit {
+    position: absolute;
+    top: -1000px;
+}

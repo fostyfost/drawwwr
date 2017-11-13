@@ -1,0 +1,122 @@
+.ff-auth {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    padding: 0;
+    border: 10px solid #000;
+    background: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    min-width: 300px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.ff-auth__form, .ff-auth__message {
+    display: block;
+    width: 100%;
+    max-width: 80%;
+    min-width: 200px;
+    margin: 0 auto;
+}
+
+.ff-auth__label {
+    display: block;
+    margin: 20px auto;
+    font-size: 2rem;
+    color: #000;
+}
+
+.ff-auth__input {
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 50%;
+    min-width: 200px;
+    font-size: 1rem;
+    text-align: center;
+    border: 2px solid #000;
+    border-radius: 3px;
+    color: #000;
+    background-color: #e7e8e7;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ff-auth__error-message {
+    display: block;
+    margin: 20px auto;
+    font-weight: normal;
+    font-size: 1.6rem;
+    color: #a91204;
+    visibility: hidden;
+    min-height: 25px;
+}
+
+.ff-auth__error-message--visible {
+    visibility: visible;
+}
+
+.ff-auth__button {
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 40%;
+    max-width: 300px;
+    min-width: 200px;
+    margin: 5px;
+    padding: 10px 0;
+    border: 2px solid #000;
+    border-radius: 3px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.6rem;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.ff-auth__button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.preloader-overlay {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .9;
+    z-index: 9999;
+    position: fixed;
+}
+
+.preloader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.ball-scale-multiple > div {
+    background-color: #000;
+}

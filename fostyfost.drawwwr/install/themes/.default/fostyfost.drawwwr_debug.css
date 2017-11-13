@@ -1,0 +1,233 @@
+#ff-r {
+    background: #000;
+    margin: 16px 12px;
+    padding: 23px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: block !important;
+    overflow: hidden;
+    line-height: 1.5;
+    font-family: Arial, sans-serif !important;
+}
+
+#ff-r kbd {
+    padding: 0 0 0 20px !important;
+    font-family: Arial, sans-serif !important;
+    font-size: 16px !important;
+    display: block;
+}
+
+#ff-r kbd:after {
+    content: '\0020';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#ff-r div {
+    display: inline-block;
+    padding: 4px 0 6px 20px;
+    margin-left: -20px;
+    position: relative;
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: Arial, sans-serif !important;
+}
+
+#ff-r div:before {
+    content: ' ';
+    background: url('/bitrix/images/fostyfost.drawwwr/sprite.png') no-repeat -9.5px -9.5px;
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    margin-top: -6px;
+}
+
+#ff-r .ff-o {
+    background: blueviolet;
+}
+
+#ff-r .ff-o:before {
+    content: ' ' !important;
+    background: url('/bitrix/images/fostyfost.drawwwr/sprite.png') no-repeat -9.5px -71.5px !important;
+}
+
+#ff-r .ff-o + kbd {
+    display: block !important;
+}
+
+#ff-r b {
+    position: relative;
+    font-weight: normal !important;
+    display: block !important;
+    padding: 4px 6px;
+    border-radius: 5px;
+    float: left !important;
+    clear: both !important;
+    cursor: default;
+    margin: 0 0 2px;
+}
+
+#ff-r b:hover {
+    background: #270e29;
+}
+
+#ff-r div:hover {
+    background: #270e29;
+}
+
+.ff-i {
+    padding: 0 !important;
+}
+
+.ff-i:hover {
+    background: transparent !important;
+}
+
+#ff-r h2, #ff-r i {
+    display: inline-block !important;
+    vertical-align: middle;
+}
+
+#ff-r .ff-c {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#ff-r .ff-c + a {
+    background: url('/bitrix/images/fostyfost.drawwwr/sprite.png') no-repeat -10px -101px !important;
+    margin: 5px 0 -3px -6px;
+}
+
+#ff-r h2 {
+    font-size: 15px !important;
+    font-weight: bold !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-family: Arial, sans-serif !important;
+}
+
+#ff-r i {
+    margin: -1px 5px 0;
+    height: 16px;
+    width: 16px;
+    padding-right: 1px;
+    font-weight: bold !important;
+    font-family: Arial, sans-serif !important;
+    box-sizing: border-box;
+    font-style: normal !important;
+    background: #b1b1b1 !important;
+    color: #fff !important;
+    text-align: center !important;
+    border-radius: 50px;
+    font-size: 11px;
+}
+
+#ff-r s {
+    margin: 0 10px 0 4px !important;
+    font-size: 15px !important;
+    color: #a4a4a1 !important;
+    text-decoration: none !important;
+    font-family: Arial, sans-serif !important;
+}
+
+#ff-r .ff-c {
+    display: inline;
+    font-size: 14px !important;
+    vertical-align: 1px;
+    white-space: normal !important;
+}
+
+#ff-r p {
+    display: inline-block;
+    height: 18px;
+    padding: 0 20px 0 0 !important;
+    vertical-align: 1px;
+    margin: 0 !important;
+    max-width: 520px;
+    font-family: Arial, sans-serif !important;
+    font-size: 14px !important;
+    overflow: hidden;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+}
+
+#ff-r p + a {
+    background: url('/bitrix/images/fostyfost.drawwwr/sprite.png') no-repeat -10px -39px !important;
+    margin: 5px 0 -2px -15px;
+}
+
+#ff-r a {
+    display: inline-block !important;
+    height: 14px;
+    width: 14px;
+    white-space: nowrap !important;
+}
+
+.ff-d {
+    display: block;
+    color: #707070;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+#ff-r kbd b kbd {
+    display: none !important;
+    margin-top: 8px;
+    font-family: Arial, sans-serif !important;
+}
+
+#ff-r kbd b kbd b kbd b:hover:before {
+    content: '•';
+    position: absolute;
+    left: -30px;
+    letter-spacing: .3em;
+    color: #b1b1b1;
+    top: 5px;
+}
+
+#ff-r kbd b kbd b kbd b kbd b:hover:before {
+    content: '• •';
+    left: -50px;
+}
+
+#ff-r kbd b kbd b kbd b kbd b kbd b:hover:before {
+    content: '• • •';
+    left: -70px;
+}
+
+#ff-r kbd b kbd b kbd b kbd b kbd b kbd b:hover:before {
+    content: '• • • •';
+    left: -90px;
+}
+
+#ff-r kbd b kbd b kbd b kbd b kbd b kbd b kbd b:hover:before {
+    content: '• • • • •';
+    left: -110px;
+}
+
+#ff-r kbd b kbd b kbd b kbd b kbd b kbd b kbd b kbd b:hover:before {
+    content: '• • • • • •';
+    left: -130px;
+}
+
+#ff_debug_menu_icon {
+    background-image: url('icons/fostyfost.drawwwr/icon.png');
+}
+
+#ff_debug_page_icon {
+    background-image: url('icons/fostyfost.drawwwr/icon_page.png');
+}
+
+.ff_debug_menu_icon {
+    background: url('icons/fostyfost.drawwwr/icon.png') 9px 4px no-repeat !important;
+}
+
+.ff_debug_page_icon {
+    background-image: url('icons/fostyfost.drawwwr/icon_page.png');
+}
